@@ -8,6 +8,9 @@ const Home: NextPage = () => {
       <Link href="nocache">
         <a>No cache</a>
       </Link>
+      <Link href="cache">
+        <a>Cache</a>
+      </Link>
     </div>
   );
 };
