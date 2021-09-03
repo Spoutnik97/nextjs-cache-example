@@ -6,10 +6,13 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Link href="nocache">
-        <a>No cache</a>
+        <a style={{ marginBottom: 12 }}>No cache ➡️</a>
       </Link>
       <Link href="cache">
-        <a>Cache</a>
+        <a style={{ marginBottom: 12 }}>Cache ➡️</a>
+      </Link>
+      <Link href="react-query" passHref>
+        <a style={{ marginBottom: 12 }}>React Query ➡️</a>
       </Link>
     </div>
   );
