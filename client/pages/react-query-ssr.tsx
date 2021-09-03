@@ -13,9 +13,9 @@ const fetchPosts = async () => {
   return response;
 };
 
-export const getServerSideProps = async () => {
-  const queryClient = new QueryClient();
+const queryClient = new QueryClient();
 
+export const getServerSideProps = async () => {
   await queryClient.prefetchQuery("posts", fetchPosts, { staleTime: 10000 });
 
   return {
