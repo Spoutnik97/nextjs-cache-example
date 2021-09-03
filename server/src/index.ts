@@ -15,11 +15,13 @@ app.get("/", (req, res) => {
 app.use((req, res, next) => {
   setTimeout(() => {
     next();
-  }, 500);
+  }, 1000);
 });
 
 app.get("/nocache", (req, res) => {
   console.log(Date.now(), "Delivering some no-cached content");
+
+  console.log("Host : ", req.headers.host, " - Origin : ", req.headers.origin);
 
   res.status(200).json(mockPosts);
 });

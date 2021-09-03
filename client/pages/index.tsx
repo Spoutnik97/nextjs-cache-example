@@ -14,6 +14,9 @@ const Home: NextPage = () => {
       <Link href="react-query" passHref>
         <a style={{ marginBottom: 12 }}>React Query ➡️</a>
       </Link>
+      <Link href="react-query-ssr" passHref>
+        <a style={{ marginBottom: 12 }}>React Query with SSR ➡️</a>
+      </Link>
     </div>
   );
 };
