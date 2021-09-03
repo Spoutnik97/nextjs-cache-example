@@ -1,0 +1,16 @@
+{
+  "name": "cache",
+  "version": "1.0.0",
+  "description": "test cache server and client side",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start:client": "yarn workspace client dev",
+    "start:server": "yarn workspace server start"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
