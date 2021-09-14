@@ -14,9 +14,12 @@ const fetchPosts = async () => {
 };
 
 const queryClient = new QueryClient();
+const STALE_TIME = 10000;
 
 export const getServerSideProps = async () => {
-  await queryClient.prefetchQuery("posts", fetchPosts, { staleTime: 10000 });
+  await queryClient.prefetchQuery("posts", fetchPosts, {
+    staleTime: STALE_TIME,
+  });
 
   return {
     props: {
@@ -27,7 +30,7 @@ export const getServerSideProps = async () => {
 
 const ReactQuery: NextPage = () => {
   const { data, isLoading } = useQuery<Post[]>("posts", fetchPosts, {
-    staleTime: 10000,
+    staleTime: STALE_TIME,
   });
 
   return (
